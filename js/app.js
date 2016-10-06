@@ -327,6 +327,10 @@ var app = angular.module("myApp", [
 						{
 							text: "Talk to Your Doctor",
 							link: ""
+						},
+						{
+							text: "Crisis Line BC",
+							link: ""
 						}
 					]
 				}
