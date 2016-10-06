@@ -1,0 +1,25 @@
+{
+	"firstName": "John",
+	"middleName": "Michael",
+	"lastName": "Smith",
+	"username": "SmithJM",
+	"password": "password",
+	"paycheques": [
+		{
+			"date": "2016/05/29",
+			"amount": "1482.12"
+		},
+		{
+			"date": "2016/05/15",
+			"amount": "1482.12"
+		},
+		{
+			"date": "2016/05/01",
+			"amount": "1482.12"
+		},
+		{
+			"date": "2016/04/16",
+			"amount": "1482.12"
+		}
+	]
+}

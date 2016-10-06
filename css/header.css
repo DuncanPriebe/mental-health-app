@@ -1,0 +1,84 @@
+.header {
+	width: 450px;
+	height: 50px;
+}
+
+.header-text-prefix {
+	font-family: Roboto, Calibri;
+	font-size: 24px;
+}
+
+.header-text {
+	font-family: Roboto;
+	font-size: 26px;
+	font-weight: bold;
+	line-height: 50px;
+	margin-left: 10px;
+}
+
+.header-text:before {
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.header-info-light {
+	background: rgb(210, 210, 210);
+	color: rgb(0, 0, 0);
+}
+
+.header-info-dark {
+	background: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+
+.header-okay-light {
+	background: rgb(115, 205, 205);
+	color: rgb(0, 0, 0);
+}
+
+.header-okay-dark {
+	background: rgb(45, 145, 145);
+	color: rgb(255, 255, 255);
+}
+
+.header-warning-light {
+	background: rgb(255, 175, 120);
+	color: rgb(0, 0, 0);
+}
+
+.header-warning-dark {
+	background: rgb(250, 130, 45);
+	color: rgb(255, 255, 255);
+}
+
+.header-error-light {
+	background: rgb(230, 130, 130);
+	color: rgb(0, 0, 0);
+}
+
+.header-error-dark {
+	background: rgb(215, 45, 45);
+	color: rgb(255, 255, 255);
+}
+
+.header-special-light {
+	background: rgb(95, 165, 205);
+	color: rgb(0, 0, 0);
+}
+
+.header-special-dark {
+	background: rgb(75, 125, 170);
+	color: rgb(255, 255, 255);
+}
+
+.header-purple-light {
+	background: rgb(145, 120, 190);
+	color: rgb(0, 0, 0);
+}
+
+.header-purple-dark {
+	background: rgb(85, 60, 125);
+	color: rgb(255, 255, 255);
+}

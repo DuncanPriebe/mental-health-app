@@ -1,0 +1,27 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 450px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.footer-text-prefix {
+	font-family: Roboto, Calibri;
+	font-size: 24px;
+}
+
+.footer-text {
+	font-family: Roboto;
+	font-size: 26px;
+	font-weight: bold;
+	line-height: 50px;
+	margin-left: 10px;
+}
+
+.footer-text:before {
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}

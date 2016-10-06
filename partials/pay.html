@@ -1,0 +1,22 @@
+<div header class="header header-special-light"></div>
+<div class="page page-dark">
+	<div class="icon box short info-light first-row first-column">
+		<span class="icon-text">Recent Paycheques</span>
+	</div>
+	<div ng-repeat="paycheque in user.paycheques">
+		<div class="currency-icon square info-light first-column" >
+			<span class="currency-icon-text">{{paycheque.date}}</span>
+		</div>
+		<div class="currency-icon square info-light" >
+			<span class="currency-icon-text-prefix">$</span>
+			<span class="currency-icon-text">{{paycheque.amount}}</span>
+		</div>
+	</div>
+	<div class="icon box short info-light first-column">
+		<span class="icon-text-prefix">
+			<span class="glyphicon glyphicon-envelope"></span>
+		</span>
+		<span class="icon-text"><a href="mailto:PhoenixSupport@CSC-SCC.GC.CA">Email the Pay Centre</a></span>
+	</div>
+</div>
+<div footer class="footer header-special-dark"></div>

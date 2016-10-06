@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0">
+    <title>Hackathon Mental Health App</title>
+    <link rel="stylesheet" href="css\glyphicons.css">
+    <link rel="stylesheet" href="css\header.css">
+    <link rel="stylesheet" href="css\content.css">
+    <link rel="stylesheet" href="css\footer.css">
+    <script src="angular\angular.js"></script>
+    <script src="angular\angular-route.min.js"></script>
+    <script src="angular\angular-animate.min.js"></script>
+    <script src="angular\angular-touch.min.js"></script>
+    <script src="js\app.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <div first-slide-preventer></div>
+        <div ng-view slide-class class="view"></div>
+    </div>
+</body>
+</html>

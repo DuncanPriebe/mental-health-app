@@ -1,0 +1,534 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {
+	font-family: Roboto;
+	src: url("../fonts/Roboto-Light.ttf");
+}
+
+/* Make images non-draggable */
+.nonDraggableImage {
+    -webkit-user-drag: none;
+}
+
+body {
+	background-color: rgb(40, 40, 40);
+	height: 100%;
+	/*overflow: hidden;*/
+}
+
+button {
+	outline: none;
+	border: none;
+}
+
+a, a:hover, a:visited, a:active {
+	text-decoration: none;
+}
+
+input, input:hover, input:active {
+	outline: none;
+	border: none;
+}
+
+input[type="text"] {
+	text-align: center;
+	font-size: 18px;
+}
+
+input[type="password"] {
+	text-align: center;
+	font-size: 18px;
+}
+
+.app-container {
+	font-size: 0px;
+	background: #404040;
+	margin: 0px auto;
+	width: 450px;
+	height: 800px;
+	position: relative;
+	overflow: hidden;
+	min-height: 100%;
+}
+
+.view {
+	min-height: 100%;
+    width: 100%;
+    position:absolute;
+    left: 0;
+}
+
+.slideLeft.ng-enter, .slideLeft.ng-leave, .slideRight.ng-enter, .slideRight.ng-leave  {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.slideLeft.ng-enter {
+    left: 100%;
+}
+
+.slideLeft.ng-enter.ng-enter-active {
+    left: 0;
+}
+
+.slideLeft.ng-leave.ng-leave-active {
+    left: -100%;
+}
+
+.slideRight.ng-enter {
+    left: -100%;
+}
+
+.slideRight.ng-enter.ng-enter-active {
+    left: 0;
+}
+
+.slideRight.ng-leave.ng-leave-active {
+    left: 100%;
+}
+
+.page {
+	width: 100%;
+	height: 750px;
+}
+
+.page-light {
+	background: rgb(255, 255, 255);
+}
+
+.page-dark {
+	background: rgb(60, 60, 60);
+}
+
+.page-okay {
+	background: rgb(65, 175, 175);
+}
+
+.page-special {
+	background: rgb(95, 165, 205);
+}
+
+.page-warning {
+	background: rgb(225, 90, 90);
+}
+
+.icon {
+	height: 15.25%;
+	margin: 1%;
+	padding: 2%;
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	text-align: center;
+	float: left;
+	transition: all 0.2s linear;
+	box-sizing: border-box;
+}
+
+.icon-text-prefix {
+	/*
+	position: absolute;
+	top: 49%;
+	right: 95%;
+	font-family: Roboto, Calibri;
+	font-size: 24px;
+	transform: translate(0, -50%);
+	*/
+	font-family: Roboto, Calibri;
+	font-size: 24px;
+}
+
+.icon-text-prefix:before {
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.icon-text-prefix:after {
+	content: "\00a0";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.icon-text {
+	font-family: Roboto, Calibri;
+	font-size: 24px;
+	text-align: center;
+}
+
+.icon-text a {
+	font-family: Roboto, Calibri;
+	font-size: 24px;
+	text-align: center;
+}
+
+.icon-text:before {
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.icon img {
+	width: 60%;
+	height: 100%;
+	border: none;
+}
+
+.icon:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.currency-icon {
+	height: 4.6%;
+	margin: 1%;
+	padding: 2%;
+	position: relative;
+	display: inline-block;
+	text-align: right;
+	transition: all 0.5s ease-in-out;
+	box-sizing: border-box;
+}
+
+.currency-icon-text-prefix {
+	position: absolute;
+	top: 49%;
+	right: 95%;
+	font-family: Roboto, Calibri;
+	font-size: 24px;
+	transform: translate(0, -50%);
+}
+
+.currency-icon-text {
+	font-family: Roboto, Calibri;
+	font-size: 24px;
+	padding-right: 2%;
+}
+
+.currency-icon-text:before {
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.textbox {
+	height: 15.25%;
+	margin: 1%;
+	padding: 2%;
+	display: inline-block;
+	transition: all 0.5s ease-in-out;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+.textbox-text {
+	font-family: Roboto, Calibri;
+	font-size: 16px;
+	text-align: left;
+}
+
+.short .textbox-text:before {
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.textbox-text a {
+	font-family: Roboto, Calibri;
+	font-size: 16px;
+	text-align: left;
+}
+
+.image-icon {
+	height: 15.25%;
+	margin: 1%;
+	padding: 0;
+	position: relative;
+	display: inline-block;
+	text-align: right;
+	transition: all 0.5s ease-in-out;
+	box-sizing: border-box;
+	float: left;
+}
+
+.image-icon-text-prefix {
+	position: absolute;
+	top: 49%;
+	right: 95%;
+	font-family: Roboto, Calibri;
+	font-size: 24px;
+	transform: translate(0, -50%);
+}
+
+.image-icon-text {
+	font-family: Roboto, Calibri;
+	font-size: 24px;
+	padding-right: 2%;
+}
+
+.image-icon-text:before {
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.image-icon img {
+	width: 100%;
+	height: 100%;
+}
+
+.image-icon-square {
+	width: 47%;
+}
+
+.image-icon-box {
+	width: 96%;
+}
+
+.info-light {
+	background: rgb(210, 210, 210);
+	color: rgb(0, 0, 0);
+}
+
+.info-light a {
+	background: rgb(210, 210, 210);
+	color: rgb(0, 0, 0);
+}
+
+.info-dark {
+	background: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+
+.info-dark a {
+	background: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+
+.okay-light {
+	background: rgb(115, 205, 205);
+	color: rgb(0, 0, 0);
+}
+
+.okay-light a {
+	color: rgb(0, 0, 0);
+}
+
+.okay-dark {
+	background: rgb(45, 145, 145);
+	color: rgb(255, 255, 255);
+}
+
+.okay-dark a {
+	color: rgb(255, 255, 255);
+}
+
+.warning-light {
+	background: rgb(255, 175, 120);
+	color: rgb(0, 0, 0);
+}
+
+.warning-light a {
+	color: rgb(0, 0, 0);
+}
+
+.warning-dark {
+	background: rgb(250, 130, 45);
+	color: rgb(255, 255, 255);
+}
+
+.warning-dark a {
+	color: rgb(255, 255, 255);
+}
+
+.error-light {
+	background: rgb(230, 130, 130);
+	color: rgb(0, 0, 0);
+}
+
+.error-light a {
+	color: rgb(0, 0, 0);
+}
+
+.error-dark {
+	background: rgb(215, 45, 45);
+	color: rgb(255, 255, 255);
+}
+
+.error-dark a {
+	color: rgb(255, 255, 255);
+}
+
+.special-light {
+	background: rgb(95, 165, 205);
+	color: rgb(0, 0, 0);
+}
+
+.special-light a {
+	color: rgb(0, 0, 0);
+}
+
+.special-dark {
+	background: rgb(75, 125, 170);
+	color: rgb(255, 255, 255);
+}
+
+.special-dark a {
+	color: rgb(255, 255, 255);
+}
+
+.purple-light {
+	background: rgb(145, 120, 190);
+	color: rgb(0, 0, 0);
+}
+
+.purple-light a {
+	color: rgb(0, 0, 0);
+}
+
+.purple-dark {
+	background: rgb(85, 60, 125);
+	color: rgb(255, 255, 255);
+}
+
+.purple-dark a {
+	color: rgb(255, 255, 255);
+}
+
+.box {
+	width: 96%;
+}
+
+.square {
+	width: 47%;
+}
+
+.very-short {
+	height: 4.29%;
+	line-height: 100%;
+}
+
+.short {
+	height: 6.5%;
+}
+
+.tall {
+	height: 29.5%;
+}
+
+.square .icon-text-prefix {
+	right: 90%;
+}
+
+.square .currency-icon-text-prefix {
+	right: 90%;
+}
+
+.quare .image-icon-text-prefix {
+	right: 90%;
+}
+
+.circle {
+	border-radius: 50%;
+}
+
+.first-column {
+	margin-left: 2%;
+}
+
+.first-row {
+	margin-top: 2%;
+}
+
+/* The switch - the box around the slider */
+.switch {
+	height: 4.7%;
+	width: 44%;
+	margin: 1%;
+	padding: 2%;
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	text-align: center;
+	float: left;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 80%;
+  width: 20%;
+  left: 2.5%;
+  bottom: 10%;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.switch:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+* html .switch             { zoom: 1; } /* IE6 */
+*:first-child+html .switch { zoom: 1; } /* IE7 */
+
+input:checked + .info-light {
+  background: rgb(120, 120, 120);
+}
+
+input:checked + .info-dark {
+	background: rgb(120, 120, 120);
+}
+
+input:checked + .slider:before {
+  transform: translateX(370%);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 450px) {
+	.app-container {
+		width: 100%;
+	}
+}

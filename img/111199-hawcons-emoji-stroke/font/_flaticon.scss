@@ -1,0 +1,169 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 22/06/2016 15:09
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-amused-face-emoticon-outline:before { content: "\f100"; }
+.flaticon-amused-face-of-happy-emoticon:before { content: "\f101"; }
+.flaticon-amused-smiling-happy-emoticon-face-with-closed-eyes:before { content: "\f102"; }
+.flaticon-angry-emoticon:before { content: "\f103"; }
+.flaticon-angry-face-emoticon-outline:before { content: "\f104"; }
+.flaticon-angry-face-outlined-emoticon-symbol:before { content: "\f105"; }
+.flaticon-angry-face-stroke:before { content: "\f106"; }
+.flaticon-astonished-face-stroke:before { content: "\f107"; }
+.flaticon-astonished-outlined-emoticon-face:before { content: "\f108"; }
+.flaticon-emoticon-face-outline-with-opened-mouth-and-lifted-eyebrows:before { content: "\f109"; }
+.flaticon-emoticon-face-with-closed-eyes-and-opened-mouth:before { content: "\f10a"; }
+.flaticon-emoticon-neutral-face-outline:before { content: "\f10b"; }
+.flaticon-emoticon-outlined-face-with-opened-mouth:before { content: "\f10c"; }
+.flaticon-emoticon-outlined-face-with-opened-mouth-1:before { content: "\f10d"; }
+.flaticon-emoticon-stroke-face-with-closed-eyes-and-opened-mouth:before { content: "\f10e"; }
+.flaticon-emoticon-with-closed-eyes-and-opened-mouth:before { content: "\f10f"; }
+.flaticon-face-stroke-with-open-mouth-and-eyebrows:before { content: "\f110"; }
+.flaticon-fake-grinning-emoticon-face-outline:before { content: "\f111"; }
+.flaticon-fake-grinning-face-outlined-emoticon-symbol:before { content: "\f112"; }
+.flaticon-flashed-emoji-face-outline:before { content: "\f113"; }
+.flaticon-flashed-face-of-emoticon-stroke:before { content: "\f114"; }
+.flaticon-grinning-face:before { content: "\f115"; }
+.flaticon-grinning-face-1:before { content: "\f116"; }
+.flaticon-grinning-face-2:before { content: "\f117"; }
+.flaticon-grinning-face-outline:before { content: "\f118"; }
+.flaticon-grinning-happy-face-with-closed-eyes:before { content: "\f119"; }
+.flaticon-kissing-female-emoticon-face:before { content: "\f11a"; }
+.flaticon-kissing-sexy-female-emoticon-face:before { content: "\f11b"; }
+.flaticon-laughing-emoticon-outlined-face:before { content: "\f11c"; }
+.flaticon-laughing-face-stroke:before { content: "\f11d"; }
+.flaticon-laughing-happy-emoticon-face-outline:before { content: "\f11e"; }
+.flaticon-male-moustache-emoticon-face-with-one-circular-eyeglass:before { content: "\f11f"; }
+.flaticon-moustache-male-face-emoticon-symbol:before { content: "\f120"; }
+.flaticon-neutral-face-outlined-emoticon-symbol:before { content: "\f121"; }
+.flaticon-neutral-face-with-straight-lines-of-eyes-and-mouth-in-circle-outline:before { content: "\f122"; }
+.flaticon-sad-emoticon-face-outline:before { content: "\f123"; }
+.flaticon-sad-emoticon-face-stroke-with-closed-eyes:before { content: "\f124"; }
+.flaticon-sad-face-emoticon-outline:before { content: "\f125"; }
+.flaticon-sad-face-emoticon-stroke:before { content: "\f126"; }
+.flaticon-sad-face-outline:before { content: "\f127"; }
+.flaticon-sad-face-outline-with-closed-eyes:before { content: "\f128"; }
+.flaticon-sad-face-outlined-emoticon:before { content: "\f129"; }
+.flaticon-sad-face-stroke:before { content: "\f12a"; }
+.flaticon-sad-outlined-emoticon-face:before { content: "\f12b"; }
+.flaticon-sadness-on-emoticon-outlined-face:before { content: "\f12c"; }
+.flaticon-silent-emoticon-face-with-missed-mouth-symbol-of-stroke:before { content: "\f12d"; }
+.flaticon-smiley-with-sunglasses:before { content: "\f12e"; }
+.flaticon-smiling-emoticon-face:before { content: "\f12f"; }
+.flaticon-smiling-emoticon-face-outline:before { content: "\f130"; }
+.flaticon-smiling-emoticon-stroke:before { content: "\f131"; }
+.flaticon-smiling-face-with-sunglasses:before { content: "\f132"; }
+.flaticon-smiling-happy-face-stroke:before { content: "\f133"; }
+.flaticon-smiling-stroke-face-with-closed-mouth-and-eyes:before { content: "\f134"; }
+.flaticon-smirking-emoticon-face-with-sunglasses:before { content: "\f135"; }
+.flaticon-smirking-emoticon-outlined-face:before { content: "\f136"; }
+.flaticon-stubborn-face-emoticon-stroke-symbol-of-straight-lines-of-eyes-and-mouth:before { content: "\f137"; }
+.flaticon-stuck-out-tongue-emoticon-face-outline:before { content: "\f138"; }
+.flaticon-stuck-out-tongue-face-stroke:before { content: "\f139"; }
+.flaticon-surprised-emoticon-stroke:before { content: "\f13a"; }
+.flaticon-unamused-emoticon-face-outlined-symbol:before { content: "\f13b"; }
+.flaticon-winking-emoticon:before { content: "\f13c"; }
+.flaticon-winking-emoticon-outlined-face:before { content: "\f13d"; }
+.flaticon-worried-face:before { content: "\f13e"; }
+.flaticon-worried-face-emoticon-outline-symbol:before { content: "\f13f"; }
+.flaticon-worried-face-outlined-symbol-of-stroke:before { content: "\f140"; }
+    
+    $font-Flaticon-amused-face-emoticon-outline: "\f100";
+    $font-Flaticon-amused-face-of-happy-emoticon: "\f101";
+    $font-Flaticon-amused-smiling-happy-emoticon-face-with-closed-eyes: "\f102";
+    $font-Flaticon-angry-emoticon: "\f103";
+    $font-Flaticon-angry-face-emoticon-outline: "\f104";
+    $font-Flaticon-angry-face-outlined-emoticon-symbol: "\f105";
+    $font-Flaticon-angry-face-stroke: "\f106";
+    $font-Flaticon-astonished-face-stroke: "\f107";
+    $font-Flaticon-astonished-outlined-emoticon-face: "\f108";
+    $font-Flaticon-emoticon-face-outline-with-opened-mouth-and-lifted-eyebrows: "\f109";
+    $font-Flaticon-emoticon-face-with-closed-eyes-and-opened-mouth: "\f10a";
+    $font-Flaticon-emoticon-neutral-face-outline: "\f10b";
+    $font-Flaticon-emoticon-outlined-face-with-opened-mouth: "\f10c";
+    $font-Flaticon-emoticon-outlined-face-with-opened-mouth-1: "\f10d";
+    $font-Flaticon-emoticon-stroke-face-with-closed-eyes-and-opened-mouth: "\f10e";
+    $font-Flaticon-emoticon-with-closed-eyes-and-opened-mouth: "\f10f";
+    $font-Flaticon-face-stroke-with-open-mouth-and-eyebrows: "\f110";
+    $font-Flaticon-fake-grinning-emoticon-face-outline: "\f111";
+    $font-Flaticon-fake-grinning-face-outlined-emoticon-symbol: "\f112";
+    $font-Flaticon-flashed-emoji-face-outline: "\f113";
+    $font-Flaticon-flashed-face-of-emoticon-stroke: "\f114";
+    $font-Flaticon-grinning-face: "\f115";
+    $font-Flaticon-grinning-face-1: "\f116";
+    $font-Flaticon-grinning-face-2: "\f117";
+    $font-Flaticon-grinning-face-outline: "\f118";
+    $font-Flaticon-grinning-happy-face-with-closed-eyes: "\f119";
+    $font-Flaticon-kissing-female-emoticon-face: "\f11a";
+    $font-Flaticon-kissing-sexy-female-emoticon-face: "\f11b";
+    $font-Flaticon-laughing-emoticon-outlined-face: "\f11c";
+    $font-Flaticon-laughing-face-stroke: "\f11d";
+    $font-Flaticon-laughing-happy-emoticon-face-outline: "\f11e";
+    $font-Flaticon-male-moustache-emoticon-face-with-one-circular-eyeglass: "\f11f";
+    $font-Flaticon-moustache-male-face-emoticon-symbol: "\f120";
+    $font-Flaticon-neutral-face-outlined-emoticon-symbol: "\f121";
+    $font-Flaticon-neutral-face-with-straight-lines-of-eyes-and-mouth-in-circle-outline: "\f122";
+    $font-Flaticon-sad-emoticon-face-outline: "\f123";
+    $font-Flaticon-sad-emoticon-face-stroke-with-closed-eyes: "\f124";
+    $font-Flaticon-sad-face-emoticon-outline: "\f125";
+    $font-Flaticon-sad-face-emoticon-stroke: "\f126";
+    $font-Flaticon-sad-face-outline: "\f127";
+    $font-Flaticon-sad-face-outline-with-closed-eyes: "\f128";
+    $font-Flaticon-sad-face-outlined-emoticon: "\f129";
+    $font-Flaticon-sad-face-stroke: "\f12a";
+    $font-Flaticon-sad-outlined-emoticon-face: "\f12b";
+    $font-Flaticon-sadness-on-emoticon-outlined-face: "\f12c";
+    $font-Flaticon-silent-emoticon-face-with-missed-mouth-symbol-of-stroke: "\f12d";
+    $font-Flaticon-smiley-with-sunglasses: "\f12e";
+    $font-Flaticon-smiling-emoticon-face: "\f12f";
+    $font-Flaticon-smiling-emoticon-face-outline: "\f130";
+    $font-Flaticon-smiling-emoticon-stroke: "\f131";
+    $font-Flaticon-smiling-face-with-sunglasses: "\f132";
+    $font-Flaticon-smiling-happy-face-stroke: "\f133";
+    $font-Flaticon-smiling-stroke-face-with-closed-mouth-and-eyes: "\f134";
+    $font-Flaticon-smirking-emoticon-face-with-sunglasses: "\f135";
+    $font-Flaticon-smirking-emoticon-outlined-face: "\f136";
+    $font-Flaticon-stubborn-face-emoticon-stroke-symbol-of-straight-lines-of-eyes-and-mouth: "\f137";
+    $font-Flaticon-stuck-out-tongue-emoticon-face-outline: "\f138";
+    $font-Flaticon-stuck-out-tongue-face-stroke: "\f139";
+    $font-Flaticon-surprised-emoticon-stroke: "\f13a";
+    $font-Flaticon-unamused-emoticon-face-outlined-symbol: "\f13b";
+    $font-Flaticon-winking-emoticon: "\f13c";
+    $font-Flaticon-winking-emoticon-outlined-face: "\f13d";
+    $font-Flaticon-worried-face: "\f13e";
+    $font-Flaticon-worried-face-emoticon-outline-symbol: "\f13f";
+    $font-Flaticon-worried-face-outlined-symbol-of-stroke: "\f140";
