@@ -1,0 +1,20 @@
+<div header class="header header-info-light"></div>
+<div class="page page-dark">
+	<div ng-show="!mentalState" ng-click="loadPage('assessment/mood')"class="icon box error-light first-row first-column">
+		<span class="icon-text">Try Again</span>
+	</div>
+	<div ng-init="setMentalState()" ng-class="{
+			'okay-dark': mentalState.level == 1,
+			'amber-dark': mentalState.level == 2,
+			'warning-dark': mentalState.level == 3,
+			'error-dark': mentalState.level == 4
+		}"
+		class="icon box first-row first-column unclickable">
+		<span class="icon-text">{{mentalState.name}}</span>
+	</div>
+	<div ng-repeat="recommendation in mentalState.recommendations">
+		<div ng-click="loadURL(recommendation.link)" class="icon box info-light first-column" >
+			<span class="icon-text">{{recommendation.text}}</span>
+		</div>
+	</div>
+<div footer class="footer header-error-light"></div>

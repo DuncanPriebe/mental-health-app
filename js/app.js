@@ -28,14 +28,87 @@ var app = angular.module("myApp", [
 			animate: "slideRight"
 		})
 
-		// The Road to Mental Readiness page
-		.when("/r2mr", {
-			headerText: "R2MR",
-			headerIcon: "road",
+		// The assessment page
+		.when("/assessment", {
+			headerText: "ASSESSMENT",
+			headerIcon: "stats",
 			footerText: "Home",
 			footerIcon: "home",
 			footerLink: "home",
-			templateUrl: "partials/r2mr.html",
+			templateUrl: "partials/assessment.html",
+			controller: "viewController",
+			animate: "slideLeft"
+		})
+
+		// The mood assessment page
+		.when("/assessment/mood", {
+			headerText: "MOOD ASSESSMENT",
+			headerIcon: "dashboard",
+			footerText: "Assessment Home",
+			footerIcon: "stats",
+			footerLink: "assessment",
+			templateUrl: "partials/assessment/mood.html",
+			controller: "viewController",
+			animate: "slideLeft"
+		})
+
+		// The sleep assessment page
+		.when("/assessment/sleep", {
+			headerText: "SLEEP ASSESSMENT",
+			headerIcon: "adjust",
+			footerText: "Mood Assessment",
+			footerIcon: "dashboard",
+			footerLink: "assessment/mood",
+			templateUrl: "partials/assessment/sleep.html",
+			controller: "viewController",
+			animate: "slideLeft"
+		})
+
+
+		// The attitude assessment page
+		.when("/assessment/attitude", {
+			headerText: "ATTITUDE ASSESSMENT",
+			headerIcon: "dashboard",
+			footerText: "Sleep Home",
+			footerIcon: "adjust",
+			footerLink: "assessment/sleep",
+			templateUrl: "partials/assessment/attitude.html",
+			controller: "viewController",
+			animate: "slideLeft"
+		})
+
+		// The stress assessment page
+		.when("/assessment/behavior", {
+			headerText: "BEHAVIOR ASSESSMENT",
+			headerIcon: "glass",
+			footerText: "Attitude Assessment",
+			footerIcon: "dashboard",
+			footerLink: "assessment/attitude",
+			templateUrl: "partials/assessment/behavior.html",
+			controller: "viewController",
+			animate: "slideLeft"
+		})
+
+		// The stress assessment page
+		.when("/assessment/physical", {
+			headerText: "PHYSICAL ASSESSMENT",
+			headerIcon: "heart",
+			footerText: "Behavior Assessment",
+			footerIcon: "glass",
+			footerLink: "assessment/behavior",
+			templateUrl: "partials/assessment/physical.html",
+			controller: "viewController",
+			animate: "slideLeft"
+		})
+
+		// The result assessment page
+		.when("/assessment/result", {
+			headerText: "ASSESSMENT RESULTS",
+			headerIcon: "stats",
+			footerText: "Assessment Home",
+			footerIcon: "stats",
+			footerLink: "assessment",
+			templateUrl: "partials/assessment/result.html",
 			controller: "viewController",
 			animate: "slideLeft"
 		})
@@ -55,7 +128,7 @@ var app = angular.module("myApp", [
 		// The help page
 		.when("/help", {
 			headerText: "HELP",
-			headerIcon: "exclamation-sign",
+			headerIcon: "warning-sign",
 			footerText: "Home",
 			footerIcon: "home",
 			footerLink: "home",
@@ -150,8 +223,7 @@ var app = angular.module("myApp", [
 
 		// The default page
 		.otherwise({
-			redirectTo: "/home"
-		});
+			redirectTo: "/home"});
 })
 
 // Define routing service
@@ -159,6 +231,9 @@ var app = angular.module("myApp", [
 	return {
 		loadPage: function(page) {
 			$location.path("/" + page);
+		},
+		loadURL: function(URL) {
+			window.location.href = URL;
 		}
   	};
 })
@@ -190,6 +265,87 @@ var app = angular.module("myApp", [
 		},
 		unauthenticate: function() {
 			return false;
+		}
+  	};
+})
+
+// Define assessment service
+.factory("assessmentService", function() {
+	return {
+		getMentalState: function(moodValue, sleepValue, attitudeValue, behaviorValue, physicalValue) {
+			var mentalStates = {
+				healthy: {
+					name: "Healthy",
+					level: 1,
+					recommendations: [
+						{
+							text: "Go Outside",
+							link: "http://www.env.gov.bc.ca/bcparks/"
+						},
+						{
+							text: "Contact CMHA",
+							link: "http://www.cmha.bc.ca/documents/improving-mental-health/"
+						}
+					]
+				},
+				reacting: {
+					name: "Reacting",
+					level: 2,
+					recommendations: [
+						{
+							text: "Talk to a Friend",
+							link: ""
+						},
+						{
+							text: "Contact Peer Support",
+							link: ""
+						}
+					]
+				},
+				injured: {
+					name: "Injured",
+					level: 3,
+					recommendations: [
+						{
+							text: "Talk to a Counsellor",
+							link: ""
+						},
+						{
+							text: "Contact a Psychiatrist",
+							link: ""
+						}
+					]
+				},
+				ill: {
+					name: "Ill",
+					level: 4,
+					recommendations: [
+						{
+							text: "Connect to EAP",
+							link: ""
+						},
+						{
+							text: "Talk to Your Doctor",
+							link: ""
+						}
+					]
+				}
+			}
+			var total = moodValue + sleepValue + attitudeValue + behaviorValue + physicalValue;
+			console.log(moodValue, sleepValue, attitudeValue, behaviorValue, physicalValue);
+			var average = total / 5;
+			console.log(average);
+			if (average <= 1) {
+				return mentalStates["healthy"];
+			} else if (average > 1 && average < 2) {
+				return mentalStates["reacting"];
+			} else if (average >= 2 && average < 3) {
+				return mentalStates["injured"];
+			} else if (average >= 3 && average < 4) {
+				return mentalStates["ill"];
+			} else {
+				return null;
+			}
 		}
   	};
 })
@@ -244,7 +400,7 @@ var app = angular.module("myApp", [
 })
 
 // Define view controller
-.controller('viewController', function($scope, $route, $http, $location, routeService, authenticateService) {
+.controller('viewController', function($scope, $rootScope, $route, $http, $location, routeService, authenticateService, assessmentService) {
 	// Load user data
 	$http.get('lib/user.json')
 		.then(function(resource){
@@ -258,8 +414,9 @@ var app = angular.module("myApp", [
 	$scope.footerIcon = $route.current.footerIcon;
 	$scope.footerLink = $route.current.footerLink;
 
-	// Load route service function
+	// Load route service functions
 	$scope.loadPage = routeService.loadPage;
+	$scope.loadURL = routeService.loadURL;
 
 	// Load authenticate function
 	$scope.authenticate = function(page) {
@@ -277,7 +434,40 @@ var app = angular.module("myApp", [
 		$scope.loadPage("login");
 	}
 
+	// Return user
 	$scope.getUser = function() {
 		return $scope.user;
+	}
+
+	
+	// Load assessment functions
+	$scope.setMood = function(value) {
+		$rootScope.moodValue = value;
+	}
+
+	$scope.setSleep = function(value) {
+		$rootScope.sleepValue = value;
+	}
+
+	$scope.setAttitude = function(value) {
+		$rootScope.attitudeValue = value;
+	}
+
+	$scope.setBehavior = function(value) {
+		$rootScope.behaviorValue = value;
+	}
+
+	$scope.setPhysical = function(value) {
+		$rootScope.physicalValue = value;
+	}
+
+	$scope.setMentalState = function() {
+		$scope.mentalState = assessmentService.getMentalState(
+			$rootScope.moodValue,
+			$rootScope.sleepValue,
+			$rootScope.attitudeValue,
+			$rootScope.behaviorValue,
+			$rootScope.physicalValue
+		);
 	}
 });

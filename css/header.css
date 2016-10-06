@@ -43,6 +43,16 @@
 	color: rgb(255, 255, 255);
 }
 
+.header-amber-light {
+	background: rgb(250, 215, 100);
+	color: rgb(0, 0, 0);
+}
+
+.header-amber-dark {
+	background: rgb(250, 190, 5);
+	color: rgb(255, 255, 255);
+}
+
 .header-warning-light {
 	background: rgb(255, 175, 120);
 	color: rgb(0, 0, 0);

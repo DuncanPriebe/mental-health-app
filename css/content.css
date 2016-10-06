@@ -44,7 +44,8 @@ input[type="password"] {
 }
 
 .app-container {
-	font-size: 0px;
+	font-family: Roboto, Calibri;
+	font-size: 24px;
 	background: #404040;
 	margin: 0px auto;
 	width: 450px;
@@ -137,8 +138,6 @@ input[type="password"] {
 	font-size: 24px;
 	transform: translate(0, -50%);
 	*/
-	font-family: Roboto, Calibri;
-	font-size: 24px;
 }
 
 .icon-text-prefix:before {
@@ -156,14 +155,10 @@ input[type="password"] {
 }
 
 .icon-text {
-	font-family: Roboto, Calibri;
-	font-size: 24px;
 	text-align: center;
 }
 
 .icon-text a {
-	font-family: Roboto, Calibri;
-	font-size: 24px;
 	text-align: center;
 }
 
@@ -198,20 +193,17 @@ input[type="password"] {
 	text-align: right;
 	transition: all 0.5s ease-in-out;
 	box-sizing: border-box;
+	float: left;
 }
 
 .currency-icon-text-prefix {
 	position: absolute;
 	top: 49%;
 	right: 95%;
-	font-family: Roboto, Calibri;
-	font-size: 24px;
 	transform: translate(0, -50%);
 }
 
 .currency-icon-text {
-	font-family: Roboto, Calibri;
-	font-size: 24px;
 	padding-right: 2%;
 }
 
@@ -230,10 +222,11 @@ input[type="password"] {
 	transition: all 0.5s ease-in-out;
 	overflow: hidden;
 	box-sizing: border-box;
+	position: relative;
+	float: left;
 }
 
 .textbox-text {
-	font-family: Roboto, Calibri;
 	font-size: 16px;
 	text-align: left;
 }
@@ -246,7 +239,6 @@ input[type="password"] {
 }
 
 .textbox-text a {
-	font-family: Roboto, Calibri;
 	font-size: 16px;
 	text-align: left;
 }
@@ -267,14 +259,10 @@ input[type="password"] {
 	position: absolute;
 	top: 49%;
 	right: 95%;
-	font-family: Roboto, Calibri;
-	font-size: 24px;
 	transform: translate(0, -50%);
 }
 
 .image-icon-text {
-	font-family: Roboto, Calibri;
-	font-size: 24px;
 	padding-right: 2%;
 }
 
@@ -296,6 +284,62 @@ input[type="password"] {
 
 .image-icon-box {
 	width: 96%;
+}
+
+.text-light {
+	color: rgb(255, 255, 255);
+}
+
+.text-dark {
+	color: rgb(0, 0, 0);
+}
+
+.text-okay-light {
+	color: rgb(115, 205, 205);
+}
+
+.text-okay-dark {
+	color: rgb(45, 145, 145);
+}
+
+.text-amber-light {
+	color: rgb(250, 215, 100);
+}
+
+.text-amber-dark {
+	color: background: rgb(250, 190, 5);
+}
+
+.text-warning-light {
+	color: rgb(255, 175, 120);
+}
+
+.text-warning-dark {
+	color: rgb(250, 130, 45);
+}
+
+.text-error-light {
+	color: rgb(230, 130, 130);
+}
+
+.text-error-dark {
+	color: rgb(215, 45, 45);
+}
+
+.text-special-light {
+	color: rgb(95, 165, 205);
+}
+
+.text-special-dark {
+	color: rgb(75, 125, 170);
+}
+
+.text-purple-light {
+	color: rgb(145, 120, 190);
+}
+
+.text-purple-dark {
+	color: rgb(85, 60, 125);
 }
 
 .info-light {
@@ -333,6 +377,24 @@ input[type="password"] {
 }
 
 .okay-dark a {
+	color: rgb(255, 255, 255);
+}
+
+.amber-light {
+	background: rgb(250, 215, 100);
+	color: rgb(0, 0, 0);
+}
+
+.amber-light a {
+	color: rgb(0, 0, 0);
+}
+
+.amber-dark {
+	background: rgb(250, 190, 5);
+	color: rgb(255, 255, 255);
+}
+
+.amber-dark a {
 	color: rgb(255, 255, 255);
 }
 
@@ -416,9 +478,15 @@ input[type="password"] {
 	width: 47%;
 }
 
+.hr {
+	height: 1%;
+	padding: 0;
+}
+
 .very-short {
+	font-size: 22px;
 	height: 4.29%;
-	line-height: 100%;
+	line-height: 50%;
 }
 
 .short {
@@ -520,15 +588,13 @@ input:checked + .slider:before {
 
 /* Rounded sliders */
 .slider.round {
-  border-radius: 34px;
+	border-radius: 34px;
 }
 
 .slider.round:before {
-  border-radius: 50%;
+	border-radius: 50%;
 }
 
-@media screen and (min-width: 450px) {
-	.app-container {
-		width: 100%;
-	}
+.unclickable {
+	cursor: default;
 }
